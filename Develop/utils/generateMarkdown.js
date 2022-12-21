@@ -41,9 +41,9 @@ function renderLicenseSection(license) {
   let licenseLink = renderLicenseLink(license);
   if (licenseLink !== "" && licenseBadge) {
     return `
-    ## License 
+## License 
 
-    This project is licensed under ${licenseBadge}. See the [LICENSE](${licenseLink}) file for details.`;
+This project is licensed under ${licenseBadge}. See the [LICENSE](${licenseLink}) file for details.`;
   } else {
     return '';
   }
