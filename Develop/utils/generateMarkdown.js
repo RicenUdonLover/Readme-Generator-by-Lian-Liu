@@ -1,8 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge (license) {
+function renderLicenseBadge(license) {
   let badge = '';
-  switch (license) {
+  switch (license.trim()) {
     case 'MIT':
       badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
       break;
@@ -20,8 +20,8 @@ function renderLicenseBadge (license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink (license) {
-  switch (license) {
+function renderLicenseLink(license) {
+  switch (license.trim()) {
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
     case 'Apache 2.0':
@@ -31,33 +31,34 @@ function renderLicenseLink (license) {
     default:
       return '';
   }
-}
+};
 
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection (license) {
+function renderLicenseSection(license) {
   let licenseBadge = renderLicenseBadge(license)
   let licenseLink = renderLicenseLink(license);
-  if (licenseLink!=="" && licenseBadge) {
-    return `## License 
+  if (licenseLink !== "" && licenseBadge) {
+    return `
+    ## License 
 
-This project is licensed under ${licenseBadge}. See the [LICENSE](${licenseLink}) file for details.`;
+    This project is licensed under ${licenseBadge}. See the [LICENSE](${licenseLink}) file for details.`;
   } else {
     return '';
   }
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown (answers) {
+export function generateMarkdown(answers) {
   const licenseSection = renderLicenseSection(answers.license)
   const readme =
     `
-# ${answers.title}
+# ${answers.title.trim()}
 
 ## Description
 
-${answers.description}
+${answers.description.trim()}
 
 ## Table of Contents
 
@@ -70,31 +71,27 @@ ${answers.description}
 
 ## Installation
 
-${answers.installation}
+${answers.installation.trim()}
 
 ## Usage
 
-${answers.usage}
+${answers.usage.trim()}
 
 ${licenseSection}
 
 ## Contributing
 
-${answers.contributing}
+${answers.contributing.trim()}
 
 ## Tests
 
-${answers.tests}
+${answers.tests.trim()}
 
 ## Questions
 
-For any questions, please contact me at [${answers.email}](mailto:${answers.email}). You can also check out my GitHub profile at [https://github.com/${answers.github}](https://github.com/${answers.github}).
+For any questions, please contact me at [${answers.email.trim()}](mailto:${answers.email.trim()}). You can also check out my GitHub profile at [https://github.com/${answers.github.trim()}](https://github.com/${answers.github.trim()}).
 `
   return readme
 };
 
 
-module.exports = renderLicenseBadge;
-module.exports = renderLicenseLink;
-module.exports = renderLicenseSection;
-module.exports = generateMarkdown;
