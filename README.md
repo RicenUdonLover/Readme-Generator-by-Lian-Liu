@@ -43,5 +43,5 @@ For any questions, please contact me at [riceudon@gmail.com](mailto:riceudon@gma
 
 # *Below is the demo of this App*
 <div>
-<video src="https://youtu.be/FA0ewU5uYKE" title="Readme Generator Demo" style="width:100%; height:300px;"></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FA0ewU5uYKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
