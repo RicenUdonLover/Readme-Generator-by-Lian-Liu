@@ -42,6 +42,7 @@ Currently no test is available.
 For any questions, please contact me at [riceudon@gmail.com](mailto:riceudon@gmail.com). You can also check out my GitHub profile at [https://github.com/RicenUdonLover](https://github.com/RicenUdonLover).
 
 # *Below is the demo of this App*
-<div>
-<iframe src="https://youtu.be/FA0ewU5uYKE" title="Readme Generator Demo" style="width:100%; height:300px;"></iframe>
-</div>
+
+
+[Link to video](https://youtu.be/FA0ewU5uYKE)
+
