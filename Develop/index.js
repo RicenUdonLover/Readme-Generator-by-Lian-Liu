@@ -1,17 +1,9 @@
-// TODO: Include packages needed for this application
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const renderLicenseBadge = require('./utils/generateMarkdown.js');
-// const renderLicenseLink = require('./utils/generateMarkdown.js');
-// const renderLicenseSection = require('./utils/generateMarkdown.js');
-// const generateMarkdown = require('./utils/generateMarkdown.js');
+// Include packages needed for this application
 import inquirer from 'inquirer';
 import fs from 'fs';
 import { generateMarkdown } from './utils/generateMarkdown.js';
 
-
-
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -68,12 +60,12 @@ const questions = [
 
 
 
-// TODO: Create a function to write README file
+// Use fs to create README file
 function writeToFile(readme) {
-  fs.writeFileSync(`README.md`, readme);
+  fs.writeFileSync(`./dist/README.md`, readme);
 }
 
-// TODO: Create a function to initialize app
+// Use inquirer to initialize app
 function init() {
   inquirer.prompt(questions)
     .then(answers => {
