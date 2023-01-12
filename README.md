@@ -17,13 +17,13 @@ This App will create a README.md file for your project.
 * [Questions](#questions)
 
 ## Installation
-
-Simply download/clone this repo to your local device (Mac or PC).
+1. Download/clone this repo to your local device (Mac or PC).
+2. Install "inquirer" first by typing "npm i inquirer@8.2.4" in your command line to use this app.
+3. Run this app by typing "node index.js" in your command line in the same directory.
 
 ## Usage
 
-Open you terminal/commands, direct to "DEVELOP" folder, type "node index.js" in your terminal/commands, then press "ENTER" key.
-
+This app is used for generating a README.md for your project.
 
 ## License 
 
