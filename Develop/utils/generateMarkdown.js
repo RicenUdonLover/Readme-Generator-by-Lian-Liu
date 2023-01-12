@@ -1,7 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// This function returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = '';
+  // Use a swtich to handle the three common license types.
   switch (license.trim()) {
     case 'MIT':
       badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
@@ -18,10 +19,11 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// TODO: Create a function that returns the license link
+//This returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  switch (license.trim()) {
+    // Use a swtich to handle the three common license types.
+  switch (license.trim()) { 
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
     case 'Apache 2.0':
@@ -34,11 +36,12 @@ function renderLicenseLink(license) {
 };
 
 
-// TODO: Create a function that returns the license section of README
+// This returns the license section of README using the info created by previous helper functions
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseBadge = renderLicenseBadge(license)
-  let licenseLink = renderLicenseLink(license);
+  let licenseBadge = renderLicenseBadge(license) //Creates the badge used in the template literals below
+  let licenseLink = renderLicenseLink(license); //Creates the link used in the template literals below
+  // It will only create the license section if both badge and link are available.
   if (licenseLink !== "" && licenseBadge) {
     return `
 ## License 
@@ -49,7 +52,7 @@ This project is licensed under ${licenseBadge}. See the [LICENSE](${licenseLink}
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// This is the function to generate markdown for README
 export function generateMarkdown(answers) {
   const licenseSection = renderLicenseSection(answers.license)
   const readme =
